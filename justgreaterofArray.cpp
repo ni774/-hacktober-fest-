@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 void printgreater(int arr[],int n){
-    
+   // int n=sizeof(arr)/sizeof(arr[0]); <--- we can not use this here  we have to define in main only and use extra parameter in function
     stack<int>s;
     int arr1[n];
     for(int i=n-1;i>=0;i--){
