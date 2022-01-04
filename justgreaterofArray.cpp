@@ -1,3 +1,7 @@
+//this program will print just greater element of an array
+//eg. input--> {2,3,6,4,9,11,32}
+//output-->{3,6,9,9,11,32,-1}
+
 #include <bits/stdc++.h>
 using namespace std;
 void printgreater(int arr[],int n){
