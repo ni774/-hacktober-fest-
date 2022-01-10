@@ -1,0 +1,67 @@
+// in this program convert decimal no to binary no and 
+// count maximum consecutive 1's in binary no
+// eg. 13-->1101  ans is-> 2;
+
+// FIRST approach==>
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	int count=0,count1=0;
+	while(n>0){
+	    int r=n%2;
+	    n=n/2;
+	    if(r==1){
+	        count1++;
+	    }
+	    else
+	      count1=0;
+	    count=max(count,count1);
+	}
+	cout<<count;
+	return 0;
+}
+
+// second approach==>
+#include<bits/stdc++.h>
+using namespace std;
+
+void convert_binary(int n,vector<int>&v){
+    while(n!=0){
+        int r=n%2;
+        v.push_back(r);
+        n=n/2;
+    }
+}
+int countNo(vector<int>v){
+    int count=0,count1=0;
+    for(int i=v.size();i>=0;i--){
+        if(v[i]==1)
+           count1++;
+        else {
+           count1=0;
+        }
+        count=max(count,count1);
+    }
+    return count;
+}
+
+
+
+int main()
+{
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+    vector<int>v;
+    
+    convert_binary(n,v);
+    cout<<countNo(v);
+    
+
+    return 0;
+}
