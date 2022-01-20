@@ -1,3 +1,3 @@
-# -hacktober-fest-
-This repository for 'hacktober-fest'
-This programm add no and display sum of them
+# cpp programs-
+This repository contain 'cpp program which i did during my practice'
+
